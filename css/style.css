@@ -1,0 +1,28 @@
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+}
+
+.container {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 3em;
+    color: rgb(142, 42, 42);
+    background-color: rgb(103, 103, 103);
+}
+
+h1, h2 {
+    margin-top: .5em;
+    margin-bottom: 0;
+}

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/js.info_function_basics/css/style.css">
+
+    <title>JS Function Basics</title>
+    
+</head>
+<body>
+    <div class="container">
+        <h1>JS Function Basics</h1>
+        <h2>Function Decloration</h2>
+        <p>The function keyword goes first, then goes the name of the function, then a list of parameters between the parentheses (comma-separated, empty in the example above, we’ll see examples later) and finally the code of the function, also named “the function body”, between curly braces.</p>
+        <code>
+            function showmMessage() {
+                alert("Hello World");
+            } <br> <br>
+
+            function nameOfFunction(parameter1, parameter2, paraemter3, ect....) {
+                ... function body ...
+            } <br> <br> 
+            calling the fuunction to run it <br>
+            nameOfFunction();
+        </code>
+        <h2>Local Variables</h2>
+        <p>A local variable is created and only usable or scoped within the function it was created in.</p>
+        <code>
+            function localVar() {
+                let local = 'Hello World'; <br>
+                console.log(local);
+            } <br><br>
+
+            localVar();
+        </code>
+        <h2>Outer Variables</h2>
+        <p>A variable that can be used and even changed by any function within the program.</p>
+        <code>
+            let userName = 'John'; <br><br>
+
+            function greetUser () {
+                let message = `Hello ${userName}`; <br>
+                console.log(message);
+            } <br><br>
+
+            greetUser();
+        </code>
+        <h2>Parameters</h2>
+        <p>We can pass arbitrary data to functions using parameters. In the example below, the function has two parameters: from and text.</p>
+        <code>
+            function parameterFunc(from, text) {
+                console.log(`${from} : ${text}`);
+            } <br><br>
+            
+            parameterFunc('Liam','Success');
+        </code>
+        <h2>Returning a Value</h2>
+        <p>A function can return a value back into the calling code as the result. The directive return can be in any place of the function. When the execution reaches it, the function stops, and the value is returned to the calling code    </p>
+        <code>
+            function addTwoNums(a, b) {
+                return a + b;
+            } <br><br>
+            
+            let result = addTwoNums(3, 3); <br><br>
+            
+            console.log(result);
+        </code>
+        <h3>Using the return in multiple places</h3>
+        <code>
+            function checkAge(age) { <br>
+                if (age >= 18) { <br>
+                    return true; <br>
+                } else {
+                    return confirm('Do you have permission from your parentss ?'); 
+                }
+            } <br><br>
+            
+            let age = prompt('How old are you ?', 18); <br><br>
+            
+            if (checkAge(age)) { <br>
+                alert('Access Granted');
+            } <br> else {
+            <br> alert('Access Denied');
+            }
+        </code>
+        <h2>Functions == Comments</h2>
+    </div>
+
+    <script src="/js.info_function_basics/js/main.js"></script>
+</body>
+</html>
