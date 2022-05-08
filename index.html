@@ -85,7 +85,68 @@
             <br> alert('Access Denied');
             }
         </code>
-        <h2>Functions == Comments</h2>
+        <h2>Tasks</h2>
+        <h3>1. Is "else" required?</h2>
+        <p>No Difference</p>
+        <h3>2. Rewrite the function using th ?, ||</h3>
+        <code>
+            function isOfAge(age) { <br>
+                if (age <= 18) { <br>
+                    return true; <br>
+                } else { <br>
+                    return confirm('Did your parents allow you ?'); <br>
+                } <br>
+            } <br><br>
+            // Turnery example <br>
+            function isOfAge(age) { <br>
+            return (age >= 18) ? true : confirm('Did your parents allow you ?'); <br>
+            } <br><br>
+            let ofAge = console.log(isOfAge(15)); <br><br>
+            // || or example <br>
+            function isOfAge(age) { <br>
+            return (age >=18) || confirm('Did your parents allow you ?'); <br>
+            } <br><br>
+            let ofAge = console.log(isOfAge(15));
+        </code>
+        <h3>3. Function min(a,b);</h3>
+        <code>
+            function returnMinNumber(a, b) { <br>
+                if (a < b) { <br>
+                    return a; <br>
+                } else { <br>
+                    return b; <br>
+                } <br>
+            } <br><br>
+            
+            let min = console.log(returnMinNumber(4, 5)); <br><br>
+            
+            // Same but using the turnery operator <br>
+            function minNumber(a, b) { <br>
+                return (a < b) ? a : b; <br>
+            } <br><br>
+            
+            let min = console.log(minNumber(6, 9));
+        </code>
+        <h3>4. Function pow(a, b);</h3>
+        <code>
+            function pow(x, n) { <br>
+                let result = x; <br><br>
+            
+                for (let i = 1; i < n; i++) { <br>
+                    result *= x; <br>
+                } <br>
+                return result; <br>
+            } <br><br>
+            
+            let x = prompt(`What is X ?`); <br>
+            let n = prompt(`What is N ?`); <br><br>
+            
+            if (n < 1) { <br>
+                alert(`Power ${n} is not supported, use a positive integer.`); <br>
+            } else { <br>
+                alert(pow(x, n)); <br>
+            }
+        </code>
     </div>
 
     <script src="/js.info_function_basics/js/main.js"></script>
